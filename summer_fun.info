@@ -3,9 +3,7 @@ description = A fun and pretty theme for Backdrop CMS using Yahoo PureCSS based 
 version = BACKDROP_VERSION
 backdrop = 1.x
 
-stylesheets[all][] = css/pure.min.css
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
 
 scripts[] = js/scripts.js
