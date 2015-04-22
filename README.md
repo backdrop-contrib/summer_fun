@@ -11,8 +11,9 @@ CONTENTS OF THIS FILE
  - Requirements
  - Installation
  - Coming From Drupal?
+ - Casual Usage
+ - Advanced Usage
  - File Structure
- - Usage
  - SASS
  - Questions
  - License
@@ -44,7 +45,7 @@ This theme has been manually tested successfully creating and viewing nodes and 
 KNOWN ISSUES
 ---------------------
 
-NOTE -- this theme is in a heavy dev state and licenses are being discussed.  It may vanish tomorrow because of incompatible software licenses.  If you have spare time and shared ideas on how to propel it forward legally, you are welcome to join in and offer advice or build it together.
+NOTE -- this theme is in a heavy development state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
 This theme works as is by just installing it.
 
@@ -67,6 +68,11 @@ You may extend this theme with the documentation/classes from http://purecss.io/
 
 "Pure plays well with other libraries, including Bootstrap and jQuery. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap or jQuery modules that your application may require."
 
+This theme can use the Bourbon/Neat SASS extensions from thoughtbot.
+Bourbon is maintained and funded by thoughtbot, inc. Tweet your questions or suggestions to @bourbonsass and while you’re at it follow us too.
+
+Copyright © 2011–2015 thoughtbot, inc. Bourbon is free software, and may be redistributed under the terms specified in the license.
+
 REQUIREMENTS
 ------------
 
@@ -82,6 +88,23 @@ COMING FROM DRUPAL?
 -------------------
 
 If you are using Backdrop and have a previous knowledge of Drupal, you will notice that Drupal themes spend a lot of template files and CSS arranging things on the page where this theme doesn't so much.  This theme is more of a style guide of how page elements are supposed to look and not much layout.  It relies on the layouts module.
+
+This theme does not use the PureCSS grid by default.  It uses the default layouts module until layouts in Backdrop become more defined.
+
+CASUAL USAGE
+------------------
+
+If you would like to use CSS instead of SASS, edit the css/style.css file to alter the appearence of your website.
+Place your CSS at the bottom of the file.
+
+If you would like to add custom Javascript to your site, edit the js/scripts.js file.
+
+ADVANCED USAGE
+------------------
+
+
+
+
 
 FILE STRUCTURE
 ------------------
