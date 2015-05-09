@@ -23,11 +23,11 @@ INTRODUCTION
 ------------
 
 Summer Fun is a sand-coloured "pretty" theme for something nice out of the box.
+It has a rounded, happy feel and is probably good for blogs or websites with a fun, breezy tone.
 It may not be a good, plain base theme.  It uses:
 
 - default Backdrop layouts
 - some Bartik default CSS
-- the Color module UI for changing theme colors
 - Pure CSS by Yahoo! for more mobile friendly page elements
 - custom CSS form elements for easier mobile usage
 - a single CSS file OR

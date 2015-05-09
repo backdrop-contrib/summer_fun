@@ -803,7 +803,7 @@ td, th {
 
 /*
  * Typography
- * 
+ *
  * Text styles, not colours go in this file
  * these defaults come from the Bartik theme
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
@@ -957,7 +957,7 @@ a.feed-icon {
 /* ---------- Import design ---------- */
 /*
  * Design
- * 
+ *
  * Include all your design elements in this file.
  * forms/buttons and non-general html elements/footer/header
  * these defaults come from the Bartik theme
@@ -1585,6 +1585,9 @@ img {
   padding: 15px 15px 15px 10px;
   /* LTR */ }
 
+.logo img {
+  width: 100%; }
+
 [dir="rtl"] .block-system-header .logo {
   float: right;
   padding: 15px 10px 15px 15px; }
@@ -1646,7 +1649,7 @@ img {
 /* Region header block menus. */
 .l-header .header-menu {
   padding: 0;
-  margin: 10px 10px 0;
+  margin: 2px;
   display: inline; }
 
 .l-header .header-menu li {
@@ -1762,10 +1765,14 @@ img {
 .l-header ul.menu a {
   float: left;
   /* LTR */
-  height: 2.4em;
-  line-height: 2.4em;
+  height: 2em;
+  line-height: 2em;
   padding: 0 0.8em;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 1.429em; }
+
+.l-header ul.menu li, .l-header ul.menu a.active, .l-header ul.menu li.active a {
+  border-radius: 25px; }
 
 [dir="rtl"] .l-header ul.menu a {
   float: right; }
@@ -1885,7 +1892,10 @@ nav.header-menu {
   position: relative;
   float: left;
   width: 500px;
-  min-height: 100px; }
+  min-height: 50px; }
+
+.block-system-main-menu h2.block-title {
+  display: none; }
 
 /* ---------------- Buttons    ---------------- */
 [dir="rtl"] input.form-submit, [dir="rtl"] a.button {
@@ -2214,7 +2224,7 @@ div.block-system-main-menu ul li {
 /* ---------- Import styles ---------- */
 /*
  * Design
- * 
+ *
  * Colours go in this file
  * these defaults come from the Bartik theme
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
@@ -2236,7 +2246,18 @@ html {
     color: white;
     background: #000; }
 
-/* ---------- Color Module Styles ----------- */
+.block-system-header {
+  background-color: #FEE800;
+  border: 1px solid #ffcc00;
+  border-radius: 25px; }
+
+@media only screen and (max-width: 768px) {
+  .block-system-main-menu {
+    height: 50px;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-bottom: -25px; } }
+
 body {
   background-image: url(../images/sand_bg.png); }
 
@@ -2250,26 +2271,13 @@ body {
   background-color: #ffffff;
   border-bottom: 1px solid #ffffff; }
 
-.l-header {
-  color: #fffeff;
-  background-color: #48a9e4;
-  background-image: -moz-linear-gradient(top, #0779bf 0%, #48a9e4 100%);
-  background-image: -ms-linear-gradient(top, #0779bf 0%, #48a9e4 100%);
-  background-image: -o-linear-gradient(top, #0779bf 0%, #48a9e4 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0779bf), color-stop(1, #48a9e4));
-  background-image: -webkit-linear-gradient(top, #0779bf 0%, #48a9e4 100%);
-  background-image: linear-gradient(top, #0779bf 0%, #48a9e4 100%); }
-
 a {
-  color: #f5b760; }
+  color: #d69841; }
 
 a:hover, a:focus {
   color: #f5ad49; }
 
 a:active {
-  color: #f5ad49; }
-
-a:visited {
   color: #d69841; }
 
 .l-sidebar .block {
@@ -2356,7 +2364,18 @@ table tr th a:hover {
 
 header.l-header {
   background-color: #fbf8f1;
-  background-image: none; }
+  background-image: none;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.block-system-header {
+  background-color: #FEE800;
+  border: 1px solid #ffcc00;
+  border-radius: 25px; }
+
+.block-system-main-menu h2.block-title {
+  display: none; }
 
 .view-mode-teaser h2 a {
   color: #181818; }
@@ -2565,19 +2584,46 @@ div.admin-panel {
   border: 1px solid #ccc; }
 
 .l-container {
-  background-color: #fbf8f1; }
+  background-color: #fbf8f1;
+  border-radius: 25px; }
 
 .l-header ul.menu li a.active {
-  color: #f5b760;
   background-image: none;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8); }
+  text-transform: uppercase; }
+
+.l-header ul.menu li a.active:hover {
+  color: #fff; }
 
 .block-system-main-menu ul li ul li {
   background-color: #fff; }
 
 .l-header ul.menu li a.active:hover, .l-header ul.menu li:hover {
-  background-color: #000; }
+  background-color: #593543;
+  border-radius: 25px; }
+
+.view-display-id-block, .l-sidebar .block {
+  padding: 5px;
+  border-radius: 25px;
+  background-color: #eee9e3; }
+
+.view-display-id-block tr td, tr th {
+  border: 0px; }
+
+tr, tr.even {
+  background-color: #eee9e3; }
+
+.l-sidebar {
+  margin-top: 20px; }
+
+.l-sidebar h2 {
+  padding-left: 10px; }
+
+@media only screen and (max-width: 768px) {
+  .block-system-main-menu {
+    height: 50px;
+    min-height: 50px;
+    margin-bottom: -25px;
+    margin-top: 20px; } }
 
 .custom-menu {
   background-color: #fbf8f1; }

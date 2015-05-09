@@ -36,6 +36,12 @@
   float: left; /* LTR */
   padding: 15px 15px 15px 10px; /* LTR */
 }
+
+.logo img
+{
+width: 100%;
+}
+
 [dir="rtl"] .block-system-header .logo {
   float: right;
   padding: 15px 10px 15px 15px;
@@ -97,7 +103,7 @@
 /* Region header block menus. */
 .l-header .header-menu {
   padding: 0;
-  margin: 10px 10px 0;
+  margin: 2px;
   display: inline;
 }
 .l-header .header-menu li {
@@ -214,12 +220,18 @@
   float: right;
 }
 .l-header ul.menu a {
-  float: left; /* LTR */
-  height: 2.4em;
-  line-height: 2.4em;
+  float: left;
+  /* LTR */
+  height: 2em;
+  line-height: 2em;
   padding: 0 0.8em;
   text-decoration: none;
+  font-size: 1.429em; }
+
+.l-header ul.menu li, .l-header ul.menu a.active, .l-header ul.menu li.active a {
+  border-radius: 25px;
 }
+
 [dir="rtl"] .l-header ul.menu a {
   float: right;
 }
@@ -363,5 +375,10 @@ float: left;
 position: relative;
 float: left;
 width: 500px;
-min-height: 100px;
+min-height: 50px;
+}
+
+.block-system-main-menu h2.block-title
+{
+display: none;
 }
