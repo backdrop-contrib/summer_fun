@@ -4,7 +4,7 @@
  * Implements hook_preprocess_maintenance_page().
  */
 function summer_fun_mobile_preprocess_maintenance_page(&$variables) {
-  backdrop_add_css(backdrop_get_path('theme', 'topcoat_mobile') . '/css/maintenance-page.css');
+  backdrop_add_css(backdrop_get_path('theme', 'bartik') . '/css/maintenance-page.css');
 }
 
 /**
@@ -121,4 +121,60 @@ function summer_fun_form_element_label(&$variables) {
 
    }
    return ' <label' . drupal_attributes($attributes) . '></label><div>' . $t('!title', array('!title' => $title)) .  "</div> \n";
+}
+
+
+
+
+function summer_fun_menu_link(array $variables) {
+$element = $variables['element'];
+
+$classes = array('pure-menu-item');
+$element['#attributes']['class'] = array_merge($element['#attributes']['class'], $classes);
+$sub_menu = '';
+
+if ($element['#below']) {
+$sub_menu = backdrop_render($element['#below']);
+}
+$output = l($element['#title'], $element['#href'], $element['#localized_options']);
+return '<li' . backdrop_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+
+function summer_fun_breadcrumb($variables) {
+
+if (theme_get_setting('summer_fun_cdn') > 0)
+{
+backdrop_add_css('http://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css', array('type' => 'external', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/summer_fun/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+
+if (theme_get_setting('summer_fun_script1') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('summer_fun_script2') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('summer_fun_script3') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('summer_fun_script4') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+}
+else
+{
+backdrop_add_css('themes/summer_fun/css/pure.min.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/summer_fun/css/style.css', array('type' => 'file', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+backdrop_add_js("themes/summer_fun/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 }

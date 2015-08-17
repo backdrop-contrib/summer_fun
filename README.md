@@ -1,5 +1,20 @@
 SUMMER FUN
-===========
+------------
+
+Summer Fun is a sand-coloured "pretty" theme for something nice out of the box.
+It has a rounded, colourful happy feel and is probably good for blogs or websites with a fun, breezy tone.
+The sun, the clouds, the sand and the surf are in this design!
+It may not be a good, plain base theme.  It uses:
+
+- default Backdrop layouts
+- some Bartik default CSS
+- Pure CSS by Yahoo! for more mobile friendly page elements
+- custom CSS form elements for easier mobile usage
+- a single CSS file OR
+- SASS stylesheets using libSASS and Grunt for workflow
+- integration with the Mobile Navigation Menu module for a mobile-friendly menu
+
+This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way.
 
 CONTENTS OF THIS FILE
 ---------------------
@@ -19,39 +34,25 @@ CONTENTS OF THIS FILE
  - License
  - Maintainers
 
-INTRODUCTION
-------------
-
-Summer Fun is a sand-coloured "pretty" theme for something nice out of the box.
-It has a rounded, happy feel and is probably good for blogs or websites with a fun, breezy tone.
-It may not be a good, plain base theme.  It uses:
-
-- default Backdrop layouts
-- some Bartik default CSS
-- Pure CSS by Yahoo! for more mobile friendly page elements
-- custom CSS form elements for easier mobile usage
-- a single CSS file OR
-- SASS stylesheets using libSASS and Grunt for workflow
-- integration with the Mobile Navigation Menu module for a mobile-friendly menu
-
-This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way.
-
 TESTED
 -----
 
 @todo
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop.
+This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop 1.1.
+This has not been tested in Webform or Responsive Menus or other contrib modules yet.
 
 KNOWN ISSUES
 ---------------------
 
-NOTE -- this theme is in a heavy development state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
+NOTE -- this theme is in a somewhat stable but being developed state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
 This theme works as is by just installing it.
 
 If it bothers you that we don't use the Libraries module, file an issue and we can try to change it.
 
 When official information on using third-party frameworks becomes known, this will follow it.
+
+The first big change we will make to this theme when we have time is to run this theme through an "un-css" cleaner and chop out some css (even core) to make this download faster.  A major goal of this theme is to download your pages fast to the end user.
 
 This theme is in the process of retro-fitting its CSS into SASS.
 
@@ -67,6 +68,8 @@ Special thanks to the developers at Yahoo! for this great work!
 You may extend this theme with the documentation/classes from http://purecss.io/
 
 "Pure plays well with other libraries, including Bootstrap and jQuery. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap or jQuery modules that your application may require."
+
+This theme is inspired by: Sergey Azovskiy's work at https://www.behance.net/gallery/18308887/Summer-UI-Kit-Free .  Thanks Sergey!
 
 This theme can use the Bourbon/Neat SASS extensions from thoughtbot.
 Bourbon is maintained and funded by thoughtbot, inc. Tweet your questions or suggestions to @bourbonsass and while you’re at it follow us too.
@@ -102,10 +105,6 @@ If you would like to add custom Javascript to your site, edit the js/scripts.js 
 ADVANCED USAGE
 ------------------
 
-
-
-
-
 FILE STRUCTURE
 ------------------
 
@@ -123,35 +122,9 @@ Overall file structure
 
 SASS file structure
 
-Here is the default layout of SASS partial files in this theme.
-STYLES folder
-_styles.scss
--- style.scss contains the settings for your SASS theme and should not contain SASS/CSS
-
-BASE folder
-_normalize.scss
--- this file contains the base CSS for your site.  You probably shouldn't alter this file.
-
-_extendables.scss
-_functions.scss
-_mixins.scss
--- these files contain the functions to transform your SASS.
-
-_variables.scss
--- this file contains the variables to place into your theme.  For example, define $link-color here as #0000ff rather than write #0000ff in your files.
-_typography.scss
--- this file contains the SASS that defines your base fonts, text elements, and so forth.
-
-DESIGN folder
-_design.scss
--- form elements, buttons, etc
-
-_layout.scss
--- tables, blocks, layout design, etc
-
-_navigation.scss
--- the header, footer, and menus
-
+We are in the process of converting from random code from different places into follwowing:
+<http://www.sitepoint.com/architecture-sass-project/>
+<http://sass-guidelin.es/>
 
 USAGE
 -----
@@ -176,27 +149,29 @@ Install and download Grunt on your command line: npm install -g grunt-cli if you
 After you have those two dependencies working on your computer, use the command line to enter the root of your theme.
 
 In the root of the theme, type
+
 npm install
+
 to install the SASS tools for this theme.
 
 After this has installed, use these commands on the command line in the root of your theme to make the theme do its thing:
 
 Grunt tasks
-===========
+---------------------
 - grunt sass
 
 compile the sass files
 
 - grunt watch
 
-start a watch and livereload session for the xtheme
+start watching for changes you make to your files and on save automatically reload the page in your localhost.
 
 - grunt prod
 
 compile the theme for production
 
 Compass compile
-===========
+---------------------
 
 You can also compile this theme with compass or ruby just install the following gems
 
@@ -215,13 +190,12 @@ Let us know and the maintainer will happy to work with you or field your request
 License
 -------
 
-This project is GPL v2 software. See the LICENSE.txt file in this directory for
-complete text.
+This project is GPL v2 software. See the LICENSE.txt file in this directory for complete text.
 
 Maintainers
 -----------
 
-- biolithic <https://github.com/biolithic>
+- seeking
 
 Ported to Backdrop by:
 

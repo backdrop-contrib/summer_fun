@@ -1,0 +1,415 @@
+/*
+ * Colours
+ *
+ * Colours go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
+ */
+@charset "UTF-8";
+
+a {
+    color: $base-link-color;
+}
+
+a:hover, a:active, a:focus {
+    color: $base-link-hover-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $purple;
+    opacity: .66;
+}
+
+.block-system-header {
+    background-color: $yellow;
+    box-shadow: 1px 1px 1px 1px $base-link-hover-color;
+}
+
+.block-system-main-menu {
+    background-color: $white;
+    box-shadow: 1px 1px 1px 1px $blue;
+}
+
+.block-system-main-menu ul li:hover ul li {
+    background-color: $white;
+    box-shadow: 1px 1px 1px 1px $blue;
+}
+
+.block-system-main-menu ul.menu li ul li:hover a, .block-system-main-menu ul.menu li:hover > a {
+    color: $blue;
+}
+
+.l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
+    background: inherit;
+}
+
+.l-container {
+    background: $white;
+}
+
+.l-sidebar .block {
+    background-color: #eee9e3;
+}
+
+.comment .comment-arrow {
+    border-color: $white;
+}
+
+tr.odd, code, kbd, pre, blockquote {
+    background-color: #f2f2f2;
+}
+
+kbd {
+    color: #666;
+}
+
+blockquote:before, blockquote:after {
+    color: $lightgrey;
+}
+
+table tr th {
+    background: #757575;
+    background: rgba(0, 0, 0, 0.51);
+    border-bottom-style: none;
+}
+
+#skip-link a:visited {
+    background: $darkgrey;
+    background: rgba(0, 0, 0, 0.6);
+    color: $white;
+}
+
+.tabs ul.primary li.active a,
+.js .dropbutton-widget,
+.js .dropbutton-multiple.open .dropbutton-widget:hover,
+.custom-menu-toggle .bar,
+li.node-readmore a,
+footer.link-wrapper ul.links li,
+.l-header #mobile-menu li.active-trail a,
+.l-header .form-text {
+    background-color: $white;
+}
+
+.l-header .form-text {
+    color: $realblack;
+}
+
+.l-header .form-text:hover,
+.l-header .form-text:focus,
+.l-header .form-text:active {
+    background: $white;
+    color: $realblack;
+}
+
+.l-header .form-required {
+    color: $white;
+    color: $black;
+}
+
+.unpublished .comment-text .comment-arrow {
+    border-left: 1px solid #fff4f4;
+    border-right: 1px solid #fff4f4;
+}
+
+.l-header .block-user-login input.form-submit {
+    background: $white;
+    color: $black;
+}
+
+.l-header .block-user-login input.form-submit:hover,
+.l-header .block-user-login input.form-submit:focus {
+    background: $white;
+    color: $black;
+}
+
+.gn-menu-main {
+    background: transparent !important;
+}
+
+.gn-trigger {
+    background: $white !important;
+}
+
+article .link-wrapper ul.links {
+    color: #68696b;
+}
+
+.comment .submitted .comment-time {
+    color: #68696b;
+}
+
+.l-triptych-wrapper {
+    background-color: #f0f0f0;
+    background: rgba(30, 50, 10, 0.08);
+}
+
+.l-triptych h2 {
+    color: $black;
+}
+
+.l-footer-columns,
+.l-footer {
+    color: #c0c0c0;
+    color: rgba(255, 255, 255, 0.65);
+    background-color: $black;
+}
+
+.l-footer-columns a,
+.l-footer a {
+    color: #fcfcfc;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.l-footer-columns a:hover,
+.l-footer-columns a:focus,
+.l-footer a:hover,
+.l-footer a:focus {
+    color: $white;
+}
+
+.l-footer-columns li a:hover,
+.l-footer-columns li a:focus,
+.l-footer li a:hover,
+.l-footer li a:focus {
+    background-color: #1f1f21;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.l-footer-columns li a.active {
+    color: $white;
+}
+
+.l-footer-wrapper tr.odd {
+    background-color: transparent;
+}
+
+.l-footer-wrapper tr.even {
+    background-color: $lightgrey;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.tabs ul.primary li a {
+    color: $black;
+    background-color: #ededed;
+}
+
+fieldset legend {
+    background: #dbdbdb;
+    border: 1px solid $lightgrey;
+    color: #3b3b3b;
+}
+
+fieldset legend a {
+    color: #3b3b3b;
+}
+
+fieldset legend a:hover,
+fieldset legend a:focus,
+fieldset legend a:active {
+    color: $black;
+}
+
+fieldset .fieldset-description {
+    color: #3c3c3c;
+}
+
+/* Disabled form elements */
+input.form-button-disabled,
+input.form-button-disabled:hover,
+input.form-button-disabled:focus,
+input.form-button-disabled:active,
+.form-disabled input,
+.form-disabled select,
+.form-disabled textarea {
+    background: #ededed;
+    color: #717171;
+}
+
+.form-disabled .grippie {
+    background-color: #ededed;
+    border-color: $lightgrey;
+}
+
+.form-disabled label {
+    color: #717171;
+}
+
+.js .dropbutton-widget:hover {
+    background-color: #f8f8f8;
+    border-color: #b8b8b8;
+}
+
+.l-header ul.menu li a {
+    color: $purple;
+}
+
+.custom-menu-wrapper {
+    background-color: $black;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: $white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-menu-bottom {
+    background-color: $lightgrey \9;
+}
+
+tr.odd {
+    background: #e4e4e4;
+    background: rgba(0, 0, 0, 0.105);
+}
+
+tr,
+tr.even {
+    background: #efefef;
+    background: rgba(0, 0, 0, 0.063);
+}
+
+.view-mode-teaser.sticky {
+    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.024);
+}
+
+.l-sidebar tr.even,
+.l-sidebar tr.odd {
+    background: none;
+}
+
+.tabs ul.secondary li a.active {
+    background: #f2f2f2;
+}
+
+fieldset {
+    background: $white;
+    border: 1px solid $lightgrey;
+}
+
+div.admin-panel {
+    background: #fbfbfb;
+}
+
+table tr th {
+    background: $lightgrey;
+}
+
+@media only screen and (max-width: 768px) {
+    .block-system-main-menu .mobile-menu-accordion li.expanded li,
+    .block-system-main-menu .mobile-menu-basic li.expanded li {
+        background: $lightgrey !important;
+    }
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.button-error,
+.danger,
+#edit-cancel,
+.button-secondary,
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    color: $white;
+}
+
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+input[type=submit],
+.button-success {
+    background: #f7af41;
+}
+
+input.form-submit {
+    background: #49bf85;
+}
+
+.button-error, .danger {
+    background: #de5765;
+}
+
+.button-warning, #edit-cancel, input[type=reset] {
+    background: $base-link-hover-color;
+}
+
+a.button:hover, a.button-secondary:hover {
+    color: $white;
+    text-decoration: none;
+}
+
+.button,
+.basic-cart-add-to-cart-link,
+input[type=button],
+.button-secondary,
+input[type=submit],
+input[type=reset],
+#edit-cancel,
+#edit-preview,
+#edit-delete {
+    box-shadow: 0px 2px 0px 0px #ccc;
+    border: 0px;
+    border-bottom: 3px solid #c88f35;
+}
+
+input.form-submit, .button-success {
+    box-shadow: 0px 2px 0px 0px #ccc;
+    border: 0px;
+    border-bottom: 3px solid #389868;
+}
+
+.button-error, .danger, #edit-delete {
+    box-shadow: 0px 2px 0px 0px #ccc;
+    border: 0px;
+    border-bottom: 3px solid #b34550;
+}
+
+.button:focus,
+.basic-cart-add-to-cart-link:focus,
+input[type=button]:focus,
+.button-secondary:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+#edit-cancel:focus,
+#edit-preview:focus,
+#edit-delete:focus,
+.button:active,
+.basic-cart-add-to-cart-link:active,
+input[type=button]:active,
+.button-secondary:active,
+input[type=submit]:active,
+input[type=reset]:active,
+#edit-cancel:active,
+#edit-preview:active,
+#edit-delete:active {
+    border: 0px;
+    border-top: 3px solid #c88f35;
+    background: #d89a37;
+}
+
+input.form-submit:focus, .button-success:focus,
+input.form-submit:active, .button-success:active {
+    border: 0px;
+    border-top: 3px solid #389868;
+    background: #40a877;
+}
+
+.button-error:focus, .danger:focus, #edit-delete:focus,
+.button-error:active, .danger:hover, #edit-delete:active {
+    border: 0px;
+    border-top: 3px solid #b34550;
+    background: #c44c58;
+}
