@@ -45,4 +45,52 @@ $form['summer_fun_script4'] = array(
       '#default_value' => theme_get_setting('summer_fun_script4', 'summer_fun'),
     );
 
+$form['summer_fun_juiced_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('summer_fun_juiced_main_background', 'summer_fun'),
+    );
+
+$form['summer_fun_juiced_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('summer_fun_juiced_main_background_blurred', 'summer_fun'),
+    );
+
+$form['summer_fun_juiced_big_statement_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the big statement page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('summer_fun_juiced_big_statement_background', 'summer_fun'),
+    );
+
+$form['summer_fun_juiced_big_statement_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('summer_fun_juiced_big_statement_background_blurred', 'summer_fun'),
+    );
+
+$form['summer_fun_body_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area in a core layout.'),
+      '#default_value' => theme_get_setting('summer_fun_body_main_background', 'summer_fun'),
+    );
+
+$form['summer_fun_body_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('summer_fun_body_main_background_blurred', 'summer_fun'),
+    );
+
+$form['summer_fun_footer_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the footer area in a core layout.'),
+      '#default_value' => theme_get_setting('summer_fun_footer_main_background', 'summer_fun'),
+    );
+
+$form['summer_fun_footer_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('summer_fun_footer_main_background_blurred', 'summer_fun'),
+    );
+
 }
