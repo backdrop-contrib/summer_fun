@@ -4,7 +4,9 @@ backdrop = 1.x
 type = theme
 version = 1.x-1.1
 
+; stylesheets[all][] = css/pure.min.css
 ; stylesheets[all][] = css/style.css
+; stylesheets[all][] = css/colors.css
 ; stylesheets[print][] = css/print.css
 
 ; scripts[] = js/scripts.js
@@ -15,4 +17,3 @@ breakpoints[large] = (min-width: 55em)
 ; We need at least one setting for the theme settings page to appear in the
 ; menu. Color module provides our defaults, so we just register a dummy setting.
 settings[color] = true
-
