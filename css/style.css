@@ -2,14 +2,22 @@
 /**
  * Style file
  *
- * This file is compiled into style.css
-
-@import "bourbon";
-@import "neat";
+ * This file is compiled into css/style.css
+ * Uncomment the lines of the features you would like to use.
+ * Comment the lines of the features you don't need on this website
  */
-/* ---------- Import base ---------- */
+/* ---------- Import parent theme base ---------- */
 /* Colors */
 /* Font stuff - uses a third-party font, but you can turn it off if you want */
+/**
+ * Variables
+ *
+ * Keep your site variables here
+ */
+/**
+ * Functions
+ *
+ */
 /**
  * Functions
  *
@@ -20,6 +28,11 @@
  * Snippets of reusable CSS to develop faster and keep code readable
  */
 /* Overwrite the default media mixin for ie9 fallback */
+/**
+ * Mixins
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
 /**
  * Extendables
  *
@@ -32,6 +45,11 @@
     display: table;
     clear: both; }
 
+/**
+ * Extendables
+ *
+ * Collect all of your extendable classes, ids and silent extendables.
+ */
 /*
  * Typography
  *
@@ -172,7 +190,12 @@ a.feed-icon {
   display: inline-block;
   padding: 15px 0 0 0; }
 
-/* ---------- Import custom styles ---------- */
+/*
+ * Typography
+ *
+ * Text styles, fonts, not colours go in this file
+ * these defaults come from the Bartik theme
+ */
 /**
  * Layout
  *
@@ -775,6 +798,13 @@ div.admin-panel .description {
 img {
   outline: 0; }
 
+/**
+ * Layout
+ *
+ * Layout theming should go in this file
+ * blocks, sidebars, nodes, regions and non-forms/buttons/footer/header
+ * these defaults come from the Bartik theme
+ */
 /*
  * Components
  *
@@ -1246,6 +1276,13 @@ table input.form-text, table input.form-tel, table input.form-email, table input
 .form-type-radio input[type=radio]:checked + label, .form-type-checkbox input[type=checkbox]:checked + label {
   left: 43px !important; }
 
+/*
+ * Components
+ *
+ * Include your design elements in this file
+ * forms/buttons and specific page elements
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ */
 /**
  * Navigation
  *
@@ -1637,6 +1674,12 @@ nav.header-menu {
   .responsive-menus-load-processed .l-header ul.menu li, .responsive-menus-load-processed .l-header ul.menu a.active, .responsive-menus-load-processed .l-header ul.menu li.active a {
     border-radius: 0px; } }
 
+/**
+ * Navigation
+ *
+ * footer/header/main menu/navigation go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ */
 /*
  * Colours
  *
@@ -1901,3 +1944,10 @@ input.form-submit:focus, .button-success:focus, input.form-submit:active, .butto
     color: #bbf; }
   .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
     background: inherit; } }
+
+/*
+ * Colours
+ *
+ * Colours go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ */

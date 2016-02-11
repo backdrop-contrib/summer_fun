@@ -1,14 +1,13 @@
-name = Summer Fun
-description = A fun and pretty theme for Backdrop CMS using Yahoo PureCSS based on Sergey Azovskiy's work https://dribbble.com/flexrs
+name = Summer Fun Subtheme
+description = A subtheme of a fun and pretty theme for Backdrop CMS using Yahoo PureCSS based on Sergey Azovskiy's work https://dribbble.com/flexrs
 backdrop = 1.x
 type = theme
 version = 1.x-1.3
+base theme = summer_fun
 
-stylesheets[all][] = css/pure.min.css
-stylesheets[all][] = css/style.css
-; stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/your-custom.css
-stylesheets[print][] = css/print.css
+; stylesheets[all][] = css/colors.css
+; stylesheets[print][] = css/print.css
 
 scripts[] = js/scripts.js
 breakpoints[all] = (min-width: 0em)

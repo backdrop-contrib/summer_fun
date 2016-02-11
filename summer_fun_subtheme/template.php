@@ -1,34 +1,35 @@
 <?php
 /**
  * @file
- * Summer Fun parent theme template functions
+ * Summer Fun sub theme template functions
  *
 */
+
 
 /**
  * Implements hook_preprocess_maintenance_page().
  */
-function summer_fun_preprocess_maintenance_page(&$variables) {
+function summer_fun_subtheme_preprocess_maintenance_page(&$variables) {
   backdrop_add_css(backdrop_get_path('theme', 'bartik') . '/css/maintenance-page.css');
 }
 
 /**
  * Implements hook_preprocess_layout().
  */
-function summer_fun_preprocess_layout(&$variables) {
+function summer_fun_subtheme_preprocess_layout(&$variables) {
   if ($variables['content']['header']) {
     $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
   }
 
-if (theme_get_setting('summer_fun_cdn') > 0)
+if (theme_get_setting('summer_fun_subtheme_cdn') > 0)
 {
 backdrop_add_css('http://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css', array('type' => 'external', 'every_page' => TRUE, 'group' => CSS_DEFAULT));
 }
 
-$var1 = theme_get_setting('summer_fun_juiced_main_background');
-$var2 = theme_get_setting('summer_fun_juiced_big_statement_background');
-$var3 = theme_get_setting('summer_fun_juiced_main_background_blurred');
-$var4 = theme_get_setting('summer_fun_juiced_big_statement_background_blurred');
+$var1 = theme_get_setting('summer_fun_subtheme_juiced_main_background');
+$var2 = theme_get_setting('summer_fun_subtheme_juiced_big_statement_background');
+$var3 = theme_get_setting('summer_fun_subtheme_juiced_main_background_blurred');
+$var4 = theme_get_setting('summer_fun_subtheme_juiced_big_statement_background_blurred');
 
 if ($var1 && $var3 > 0)
 {
@@ -51,10 +52,10 @@ backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement { back
 }
 
 
-$var5 = theme_get_setting('summer_fun_body_main_background');
-$var6 = theme_get_setting('summer_fun_footer_main_background');
-$var7 = theme_get_setting('summer_fun_body_main_background_blurred');
-$var8 = theme_get_setting('summer_fun_footer_main_background_blurred');
+$var5 = theme_get_setting('summer_fun_subtheme_body_main_background');
+$var6 = theme_get_setting('summer_fun_subtheme_footer_main_background');
+$var7 = theme_get_setting('summer_fun_subtheme_body_main_background_blurred');
+$var8 = theme_get_setting('summer_fun_subtheme_footer_main_background_blurred');
 
 if ($var5 && $var7 > 0)
 {
@@ -76,35 +77,34 @@ if ($var6 && $var8 == 0)
 backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer { background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
 }
 
-if (theme_get_setting('summer_fun_script1') > 0)
+if (theme_get_setting('summer_fun_subtheme_script1') > 0)
 {
 backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
-if (theme_get_setting('summer_fun_script2') > 0)
+if (theme_get_setting('summer_fun_subtheme_script2') > 0)
 {
 backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
-if (theme_get_setting('summer_fun_script3') > 0)
+if (theme_get_setting('summer_fun_subtheme_script3') > 0)
 {
 backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
-if (theme_get_setting('summer_fun_script4') > 0)
+if (theme_get_setting('summer_fun_subtheme_script4') > 0)
 {
 backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
-// backdrop_add_js("themes/summer_fun/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-// backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
+// backdrop_add_js("themes/summer_fun_subtheme/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 }
-
 
 /**
  * Implements theme_field__field_type().
  */
-function summer_fun_field__taxonomy_term_reference($variables) {
+function summer_fun_subtheme_field__taxonomy_term_reference($variables) {
   $output = '';
 
   // Render the label, if it's not hidden.
@@ -129,12 +129,14 @@ function summer_fun_field__taxonomy_term_reference($variables) {
   return $output;
 }
 
-
-function summer_fun_preprocess_image_style(&$vars) {
+/**
+ * Implements theme_preprocess_image_style().
+ */
+function summer_fun_subtheme_preprocess_image_style(&$vars) {
   $vars['attributes']['class'][] = 'pure-img';
 }
 
-function summer_fun_button(&$vars) {
+function summer_fun_subtheme_button(&$vars) {
 
 $classes = array('button-success', 'pure-button-primary', 'button-xlarge', 'pure-button');
 
@@ -155,21 +157,29 @@ if (!isset($vars['element']['#attributes']['class'])) {
 return theme_button($vars);
 }
 
-function summer_fun_css_alter(&$css) {
-  if (theme_get_setting('summer_fun_cdn') > 0)
-  {
+
+function summer_fun_subtheme_css_alter(&$css) {
   $css_to_remove = array();
+  if (theme_get_setting('summer_fun_subtheme_cdn') > 0)
+  {
   $css_to_remove[] = backdrop_get_path('theme','summer_fun') . '/css/pure.min.css';
-    foreach ($css_to_remove as $index => $css_file) {
+  }
+
+  if (theme_get_setting('summer_fun_subtheme_sass') > 0)
+  {
+  $css_to_remove[] = backdrop_get_path('theme','summer_fun') . '/css/style.css';
+  $css_to_remove[] = backdrop_get_path('theme','summer_fun') . '/css/pure.min.css';
+  }
+
+  foreach ($css_to_remove as $index => $css_file) {
       unset($css[$css_file]);
     }
-  }
 }
 
 /**
  * Implements hook_form_alter()
  */
-function summer_fun_form_alter(&$form, &$form_state, $form_id) {
+function summer_fun_subtheme_form_alter(&$form, &$form_state, $form_id) {
 $classes = array('pure-form', 'pure-form-aligned');
 if (!isset($form['#attributes']['class'])) {
         $form['#attributes'] = array('class' => $classes);
@@ -179,14 +189,14 @@ if (!isset($form['#attributes']['class'])) {
       }
 }
 
-function summer_fun_menu_tree($variables) {
+function summer_fun_subtheme_menu_tree($variables) {
 return '<ul class="menu">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Overrides theme_form_element_label().
  */
-function summer_fun_form_element_label(&$variables) {
+function summer_fun_subtheme_form_element_label(&$variables) {
   $element = $variables['element'];
   $title = filter_xss_admin($element['#title']);
  // If the element is required, a required marker is appended to the label.
@@ -213,13 +223,13 @@ function summer_fun_form_element_label(&$variables) {
     }
 
    }
-   return ' <label' . drupal_attributes($attributes) . '></label><div>' . $t('!title', array('!title' => $title)) .  "</div> \n";
+   return ' <label' . backdrop_attributes($attributes) . '></label><div>' . $t('!title', array('!title' => $title)) .  "</div> \n";
 }
 
-
-
-
-function summer_fun_menu_link(array $variables) {
+/**
+ * Implements theme_preprocess_menu_link().
+ */
+function summer_fun_subtheme_menu_link(array $variables) {
 $element = $variables['element'];
 
 $classes = array('pure-menu-item');
