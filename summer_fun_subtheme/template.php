@@ -14,67 +14,257 @@ function summer_fun_subtheme_preprocess_maintenance_page(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_layout().
+ * Implements template_preprocess_page().
  */
+function summer_fun_subtheme_preprocess_page(&$variables) {
+
+$current_layout = "default";
+$uses_admin_width = config_get('summer_fun_subtheme.settings', 'use_max_width');
+  if ($uses_admin_width) {
+
+    $uses_layout_width1 = config_get('summer_fun_subtheme.settings', 'max_width_element1');
+    if ($uses_layout_width1 < 1) {
+      $max_width_layouts1 = config_get('summer_fun_subtheme.settings', 'site_layouts1');
+      $max_width_number1 = config_get('summer_fun_subtheme.settings', 'max_width_number1');
+      foreach ($max_width_layouts1 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number1) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+    $uses_layout_width2 = config_get('summer_fun_subtheme.settings', 'max_width_element2');
+    if ($uses_layout_width2 > 0) {
+      $max_width_layouts2 = config_get('summer_fun_subtheme.settings', 'site_layouts2');
+      $max_width_number2 = config_get('summer_fun_subtheme.settings', 'max_width_number2');
+      foreach ($max_width_layouts2 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number2) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+
+    $uses_layout_width3 = config_get('summer_fun_subtheme.settings', 'max_width_element3');
+    if ($uses_layout_width3 > 0) {
+      $max_width_layouts3 = config_get('summer_fun_subtheme.settings', 'site_layouts3');
+      $max_width_number3 = config_get('summer_fun_subtheme.settings', 'max_width_number3');
+      foreach ($max_width_layouts3 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number3) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
+
 function summer_fun_subtheme_preprocess_layout(&$variables) {
-  if ($variables['content']['header']) {
-    $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
+  if ($variables['is_front']) {
+    $variables['classes'][] = 'layout-front';
+  }
+
+
+$current_layout = $variables["layout"]->name;
+$uses_admin_width = config_get('summer_fun_subtheme.settings', 'use_max_width');
+  if ($uses_admin_width) {
+
+    $uses_layout_width1 = config_get('summer_fun_subtheme.settings', 'max_width_element1');
+    if ($uses_layout_width1 > 0) {
+      $max_width_layouts1 = config_get('summer_fun_subtheme.settings', 'site_layouts1');
+      $max_width_number1 = config_get('summer_fun_subtheme.settings', 'max_width_number1');
+      foreach ($max_width_layouts1 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number1) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+    $uses_layout_width2 = config_get('summer_fun_subtheme.settings', 'max_width_element2');
+    if ($uses_layout_width2 > 0) {
+      $max_width_layouts2 = config_get('summer_fun_subtheme.settings', 'site_layouts2');
+      $max_width_number2 = config_get('summer_fun_subtheme.settings', 'max_width_number2');
+      foreach ($max_width_layouts2 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number2) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
+
+    $uses_layout_width3 = config_get('summer_fun_subtheme.settings', 'max_width_element3');
+    if ($uses_layout_width3 > 0) {
+      $max_width_layouts3 = config_get('summer_fun_subtheme.settings', 'site_layouts3');
+      $max_width_number3 = config_get('summer_fun_subtheme.settings', 'max_width_number3');
+      foreach ($max_width_layouts3 as $max_width_layout) {
+        if (!empty($max_width_layout)) {
+          if ( $max_width_layout == $current_layout ) {
+
+            switch ($max_width_number3) {
+              case "0":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-800';
+              break;
+              case "1":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-960';
+              break;
+              case "2":
+              $variables['classes'][] = 'container';
+              break;
+              case "3":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1200';
+              break;
+              case "4":
+              $variables['classes'][] = 'container';
+              $variables['classes'][] = 'container-1440';
+              break;
+              default:
+              break;
+              }
+          }
+        }
+      }
+    }
+
+
   }
 
 if (theme_get_setting('summer_fun_subtheme_cdn') > 0)
 {
 backdrop_add_css('http://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css', array('type' => 'external', 'every_page' => TRUE, 'group' => CSS_DEFAULT));
-}
-
-$var1 = theme_get_setting('summer_fun_subtheme_juiced_main_background');
-$var2 = theme_get_setting('summer_fun_subtheme_juiced_big_statement_background');
-$var3 = theme_get_setting('summer_fun_subtheme_juiced_main_background_blurred');
-$var4 = theme_get_setting('summer_fun_subtheme_juiced_big_statement_background_blurred');
-
-if ($var1 && $var3 > 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { .juiced-main::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var1) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
-}
-
-if ($var1 && $var3 == 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { .juiced-main { background: url($var1) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
-}
-
-if ($var2 && $var4 > 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var2) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
-}
-
-if ($var2 && $var4 == 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement { background: url($var2) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
-}
-
-
-$var5 = theme_get_setting('summer_fun_subtheme_body_main_background');
-$var6 = theme_get_setting('summer_fun_subtheme_footer_main_background');
-$var7 = theme_get_setting('summer_fun_subtheme_body_main_background_blurred');
-$var8 = theme_get_setting('summer_fun_subtheme_footer_main_background_blurred');
-
-if ($var5 && $var7 > 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { .layout::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var5) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
-}
-
-if ($var5 && $var7 == 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { .layout { background: url($var5) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
-}
-
-if ($var6 && $var8 > 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } footer.l-footer { background: transparent; } }", array('type' => 'inline'));
-}
-
-if ($var6 && $var8 == 0)
-{
-backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer { background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
 }
 
 if (theme_get_setting('summer_fun_subtheme_script1') > 0)

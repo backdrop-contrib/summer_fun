@@ -7,7 +7,7 @@
  * Comment the lines of the features you don't need on this website
  */
 
-@import "../node_modules/susy/sass/susy";
+/* @import "../node_modules/susy/sass/susy";
 @import "bourbon";
 @import "neat";
 
@@ -36,7 +36,7 @@ $susy: (
     clearfix: false,
     rem: true,
   )
-);
+); */
 
 /* ---------- Import parent theme base ---------- */
 @import 'core/helpers/variables';
@@ -56,13 +56,13 @@ $susy: (
 @import 'core/purecss/buttons';
 @import 'core/purecss/forms-r';
 @import 'core/purecss/forms';
-@import 'core/purecss/grids-core';
+// @import 'core/purecss/grids-core';
 @import 'core/purecss/tables';
-@import 'core/purecss/menus-core';
-@import 'core/purecss/menus-skin';
-@import 'core/purecss/menus-dropdown';
-@import 'core/purecss/menus-horizontal';
-@import 'core/purecss/menus-scrollable';
+// @import 'core/purecss/menus-core';
+// @import 'core/purecss/menus-skin';
+// @import 'core/purecss/menus-dropdown';
+// @import 'core/purecss/menus-horizontal';
+// @import 'core/purecss/menus-scrollable';
 
 @import 'core/design/typography';
 @import 'your-custom/design/typography';

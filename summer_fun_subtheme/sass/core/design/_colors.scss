@@ -1,9 +1,5 @@
 /*
- * Colours
- *
  * Colours go in this file
- * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
 @charset "UTF-8" ;
 
@@ -32,7 +28,7 @@ h6 {
   box-shadow: 1px 1px 1px 1px $base-link-hover-color;
 }
 
-.l-container {
+.l-wrapper {
   background: $white;
 }
 
