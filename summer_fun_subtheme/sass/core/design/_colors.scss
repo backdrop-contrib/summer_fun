@@ -1,7 +1,7 @@
 /*
  * Colours go in this file
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 a {
   color: $base-link-color;
@@ -29,7 +29,7 @@ h6 {
 }
 
 .l-wrapper {
-  background: $white;
+  background-color: $white;
 }
 
 .l-sidebar .block {
@@ -410,6 +410,11 @@ input.form-submit:active,
   background: #c44c58;
 }
 
+.l-wrapper.juiced-main,
+.l-content.juiced-main {
+  background-color: transparent;
+  z-index: 1;
+}
 
 @media only screen and (max-width: 768px) {
   .block-system-main-menu .mobile-menu-accordion li.expanded li,
